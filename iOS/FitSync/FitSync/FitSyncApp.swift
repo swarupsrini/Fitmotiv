@@ -11,7 +11,8 @@ import SwiftUI
 struct FitSyncApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Login()
         }
     }
 }
+
