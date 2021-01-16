@@ -108,6 +108,7 @@ struct Login: View {
                         }
                     }//End of VStack
                     .cornerRadius(40)
+                    .padding(.top, -30)
                 }.edgesIgnoringSafeArea(.top)
             }//ZStack
             .navigationBarBackButtonHidden(true)
