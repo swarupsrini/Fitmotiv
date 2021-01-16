@@ -59,11 +59,19 @@ struct Login: View {
                             Spacer()
                         }
 
-                    }.padding().background(Color.orange).cornerRadius(4.0)
+                    }.padding().background(Color.black).cornerRadius(20.0).padding(.bottom, 20)
 
+                    Button(action: {
 
-                }
-                VStack(){
+                    }) {
+                        HStack(alignment: .center) {
+                            Spacer()
+                            Text("Login with Facebook").foregroundColor(Color.white).bold()
+                            Spacer()
+                        }
+
+                    }.padding().background(Color.blue).cornerRadius(20.0)
+
 
                 }
                 Spacer()
@@ -74,6 +82,12 @@ struct Login: View {
             .padding(20)
             .background(Color.white)
             .cornerRadius(25)
+
+            VStack(alignment: .center){
+                Text("Forgot Password?").bold()
+                    .padding(.bottom, 20)
+                Text("Create a New Account").bold()
+            }
         }
     }
 }
