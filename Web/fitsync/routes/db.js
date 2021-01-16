@@ -4,8 +4,6 @@ const router = express.Router();
 const fs = require("fs");
 const { Pool } = require("pg");
 
-console.log(fs.readFileSync(__dirname + "/../keys/db_pass.txt").toString());
-
 const pool = new Pool({
   user: "bilal",
   password: fs.readFileSync(__dirname + "/../keys/db_pass.txt").toString(),
