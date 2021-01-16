@@ -4,13 +4,40 @@
 //
 //  Created by Sai Gurrapu on 1/16/21.
 //
-
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selection = 0
+
+
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView {
+            Home()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Home")
+            }
+            Analytics()
+                .tabItem {
+                    Image(systemName: "chart.bar.fill")
+                    Text("Analytics")
+            }
+            Social()
+                .tabItem {
+                    Image(systemName: "person.3.fill")
+                    Text("Social")
+            }
+            Settings()
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Settings")
+            }
+        }   // End of TabView
+            .font(.headline)
+            .imageScale(.medium)
+            .font(Font.title.weight(.regular))
+
     }
 }
 
