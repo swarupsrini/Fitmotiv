@@ -110,6 +110,7 @@ struct Login: View {
                     .cornerRadius(40)
                 }.edgesIgnoringSafeArea(.top)
             }//ZStack
+            .navigationBarBackButtonHidden(true)
         }//NavView
     }
 }

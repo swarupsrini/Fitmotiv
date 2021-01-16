@@ -37,6 +37,7 @@ struct ContentView: View {
             .font(.headline)
             .imageScale(.medium)
             .font(Font.title.weight(.regular))
+        .navigationBarBackButtonHidden(true)
 
     }
 }
