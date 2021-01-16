@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct Login: View {
-    @State private var firstName = ""
+    @State private var email = ""
+    @State private var password = ""
 
     var body: some View {
         VStack{
@@ -18,9 +19,10 @@ struct Login: View {
                         .bold()
                         .font(.title)
 
+                    //Email
                     HStack {
                         Image(systemName: "person").foregroundColor(.black).font(.system(size: 20, weight: .semibold, design: .default))
-                        TextField("Email", text: $firstName).font(.system(size: 20, weight: .semibold, design: .default))
+                        TextField("Email", text: $email).font(.system(size: 20, weight: .semibold, design: .default))
 
                     }
                     .padding(.bottom, 20)
@@ -32,9 +34,10 @@ struct Login: View {
                     )
                     .padding(.bottom, 30)
 
+                    //Password
                     HStack {
-                        Image(systemName: "person").foregroundColor(.black).font(.system(size: 20, weight: .semibold, design: .default))
-                        SecureField("Password", text: $firstName).font(.system(size: 20, weight: .semibold, design: .default))
+                        Image(systemName: "key").foregroundColor(.black).font(.system(size: 20, weight: .semibold, design: .default))
+                        SecureField("Password", text: $password).font(.system(size: 20, weight: .semibold, design: .default))
 
                     }
                     .padding(.bottom, 20)
@@ -43,9 +46,24 @@ struct Login: View {
                             .frame(height: 4)
                             .foregroundColor(Color.black),
                         alignment: .bottom
-                    )
+                    ).padding(.bottom, 50)
 
-                    //                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
+
+                    //Button
+                    Button(action: {
+
+                    }) {
+                        HStack(alignment: .center) {
+                            Spacer()
+                            Text("Login").foregroundColor(Color.white).bold()
+                            Spacer()
+                        }
+
+                    }.padding().background(Color.orange).cornerRadius(4.0)
+
+
+                }
+                VStack(){
 
                 }
                 Spacer()
