@@ -10,6 +10,7 @@ if (!process.env.DB_PASS) {
 const API_KEY = process.env.API_KEY || secrets["API_KEY"];
 const API_SECRET = process.env.SECRET || secrets["SECRET"];
 const AZURE = process.env.AZURE || secrets["AZURE"];
+const IBM = process.env.IBM || secrets["IBM"];
 
 router.get("/", function (req, res, next) {
   create_session(({ sessionId, token }) => {
@@ -18,6 +19,7 @@ router.get("/", function (req, res, next) {
       sessionID: sessionId,
       token: token,
       azure: AZURE,
+      ibm: IBM,
     };
     res.render("index", { data: JSON.stringify(json) });
   });
