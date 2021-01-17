@@ -4,11 +4,20 @@
     <title>Von boi</title>
     <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
     <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   </head>
   <body>
-    <h1>Von boi</h1>
-    <p>Welcome to Von boi</p>
     <div id="videos">
+      <div id="btns">
+        <div class="btn" id="audiobtn" onclick="audiobtnclick(event)">
+          <span class="btnicon iconify" data-icon="bx:bx-microphone"></span>
+          <!-- <span class="btnicon iconify" data-icon="bx:bx-microphone-off"></span> -->
+        </div>
+        <div class="btn" id="videobtn" onclick="videobtnclick(event)">
+          <span class="btnicon iconify" data-icon="bx:bx-video"></span>
+          <!-- <span class="btnicon iconify" data-icon="bx:bx-video-off"></span> -->
+        </div>
+      </div>
       <div id="subscriber"></div>
       <div id="publisher"></div>
     </div>
