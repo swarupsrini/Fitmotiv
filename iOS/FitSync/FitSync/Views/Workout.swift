@@ -168,7 +168,7 @@ struct BottomSheet : View {
                     }
                 }
                 else{
-                    NavigationLink(destination: Home()) {
+                    NavigationLink(destination: Break()) {
                         Image(systemName: "play.circle")
                             .font(.system(size: 49))
                             .foregroundColor(.orange)

@@ -11,21 +11,21 @@ struct Break: View {
     var body: some View {
             ZStack{
                 VStack{
-                    Image("RestScreen").resizable().aspectRatio(contentMode: .fit).frame(width: 415,height:900)
+                    Image("Summary").resizable().aspectRatio(contentMode: .fit).frame(width: 415,height:900)
 
                     Button(action: {
 
 
                     }) {
-                        NavigationLink(destination: confettiSummary()) {
+                        NavigationLink(destination: Home()) {
                             HStack(alignment: .center) {
                                 Spacer()
-                                Text("").foregroundColor(Color.white).bold()
+                                Text("").foregroundColor(Color.black).bold()
                                 Spacer()
                             }
                         }
 
-                    }.padding().cornerRadius(20.0).padding(.top, -210).buttonStyle(PlainButtonStyle())
+                    }.padding().cornerRadius(20.0).padding(.top, -460).buttonStyle(PlainButtonStyle())
                 }
             }//ZStack
             .edgesIgnoringSafeArea(.all).navigationBarTitle("")
@@ -34,32 +34,6 @@ struct Break: View {
 }
 
 
-func confettiSummary() -> some View {
-    ScrollView {
-        ZStack{
-            VStack{
-                Image("Workouts").resizable().aspectRatio(contentMode: .fit).frame(width: 415,height:1400).padding(.top,-70)
-
-                Button(action: {
-
-
-                }) {
-                    NavigationLink(destination: workoutDetails()) {
-                        HStack(alignment: .center) {
-                            Spacer()
-                            Text("").foregroundColor(Color.black).bold()
-                            Spacer()
-                        }
-
-                    }
-
-                }.padding().cornerRadius(20.0).padding(.top, -870).buttonStyle(PlainButtonStyle())
-            }
-        }//ZStack
-        .edgesIgnoringSafeArea(.all).navigationBarTitle("")
-        .navigationBarHidden(true)
-    }
-}
 
 
 

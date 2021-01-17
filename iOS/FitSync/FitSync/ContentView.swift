@@ -30,12 +30,7 @@ struct ContentView: View {
             }
             Settings()
                 .tabItem {
-                    Image(systemName: "gear")
-                    Text("Settings")
-            }
-            Workout(screenType: "Workout")
-                .tabItem {
-                    Image(systemName: "gear")
+                    Image(systemName: "gear.fill")
                     Text("Settings")
             }
         }   // End of TabView
