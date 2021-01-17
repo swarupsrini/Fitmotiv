@@ -1,6 +1,6 @@
 {  
   "scripts": {
-    "start": "bin/www",
+    "start": "Web/fitsync/bin/www",
     "heroku-prebuild": "cd Web/fitsync && npm install && npm run build"
   }
 }
