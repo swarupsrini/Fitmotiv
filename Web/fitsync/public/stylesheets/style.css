@@ -8,7 +8,7 @@ a {
 } */
 
 :root {
-  --btn-color: #ff8413;
+  --btn-color: #2e29ff;
 }
 
 body,
@@ -28,8 +28,8 @@ html {
 }
 
 .btn {
-  height: 60px;
-  width: 60px;
+  height: 180px;
+  width: 180px;
   margin-right: 12px;
   background-color: var(--btn-color);
   border-radius: 50%;
