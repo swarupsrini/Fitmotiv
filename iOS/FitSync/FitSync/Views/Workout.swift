@@ -10,7 +10,11 @@ import SwiftUI
 import SafariServices
 
 struct Workout: View {
-//    @State var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 13.086, longitude: 80.2789), latitudinalMeters: 10000, longitudinalMeters: 10000)
+
+    var screenType: String
+
+
+    //    @State var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 13.086, longitude: 80.2789), latitudinalMeters: 10000, longitudinalMeters: 10000)
     @State var offset : CGFloat = 0
     @State var urlString = "https://fierce-stream-07253.herokuapp.com/"
 
@@ -20,7 +24,13 @@ struct Workout: View {
 
             //Add View
 
-            SafariView(url:URL(string: self.urlString)!)
+            //            SafariView(url:URL(string: self.urlString)!)
+            if(screenType == "Workout"){
+                Image("WorkoutScreen").resizable().aspectRatio(contentMode: .fit).frame(width: 420,height:890)
+            }
+            else{
+                Image("RestScreen").resizable().aspectRatio(contentMode: .fit).frame(width: 420,height:890)
+            }
 
 
 
@@ -33,7 +43,7 @@ struct Workout: View {
 
                 VStack{
 
-                    BottomSheet(offset: $offset, value: (-reader.frame(in: .global).height + 150))
+                    BottomSheet(offset: $offset, value: (-reader.frame(in: .global).height + 150), screen: self.screenType)
                         .offset(y: reader.frame(in: .global).height - 140)
                         // adding gesture....
                         .offset(y: offset)
@@ -96,8 +106,9 @@ struct Workout: View {
                         }))
                 }
             }
-//            .ignoresSafeArea(.all, edges: .bottom)
-            .edgesIgnoringSafeArea(.top)
+            //            .ignoresSafeArea(.all, edges: .bottom)
+            .edgesIgnoringSafeArea(.top).navigationBarTitle("")
+            .navigationBarHidden(true)
         })
     }
 }
@@ -121,6 +132,7 @@ struct BottomSheet : View {
     @State var txt = ""
     @Binding var offset : CGFloat
     var value : CGFloat
+    var screen: String
 
     var body: some View{
 
@@ -137,20 +149,41 @@ struct BottomSheet : View {
                 Text("Plank").font(.system(size: 20)).bold().padding(.trailing,45)
 
                 Spacer()
-                
 
-                Image(systemName: "pause.circle")
-                    .font(.system(size: 49))
-                    .foregroundColor(.orange)
-                Spacer()
+                if(screen == "Workout"){
+                    NavigationLink(destination: Workout(screenType: "Rest")) {
+                        Image(systemName: "pause.circle")
+                            .font(.system(size: 49))
+                            .foregroundColor(.orange)
+                    }
 
-                HStack{
-                    Image(systemName: "timer")
-                        .font(.system(size: 21))
-                        .foregroundColor(.orange)
-                Text("00:00").font(.system(size: 20)).bold()
+
+                    Spacer()
+
+                    HStack{
+                        Image(systemName: "timer")
+                            .font(.system(size: 21))
+                            .foregroundColor(.orange)
+                        Text("00:60").font(.system(size: 20)).bold()
+                    }
                 }
+                else{
+                    NavigationLink(destination: Home()) {
+                        Image(systemName: "play.circle")
+                            .font(.system(size: 49))
+                            .foregroundColor(.orange)
+                    }
 
+
+                    Spacer()
+
+                    HStack{
+                        Image(systemName: "timer")
+                            .font(.system(size: 21))
+                            .foregroundColor(.orange)
+                        Text("00:00").font(.system(size: 20)).bold()
+                    }
+                }
 
             }
             .padding(.vertical,10)
@@ -216,7 +249,7 @@ struct BlurView : UIViewRepresentable {
 
 struct Workout_Previews: PreviewProvider {
     static var previews: some View {
-        Workout()
+        Workout(screenType: "Workouts")
     }
 }
 
