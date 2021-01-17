@@ -30,7 +30,7 @@ struct Login: View {
 
                                 //Email
                                 HStack {
-                                    Image(systemName: "person").foregroundColor(.black).font(.system(size: 20, weight: .semibold, design: .default))
+                                    Image(systemName: "person.fill").foregroundColor(.black).font(.system(size: 18, weight: .semibold, design: .default))
                                     TextField("Email", text: $email).font(.system(size: 20, weight: .semibold, design: .default))
 
                                 }
@@ -45,7 +45,7 @@ struct Login: View {
 
                                 //Password
                                 HStack {
-                                    Image(systemName: "key").foregroundColor(.black).font(.system(size: 20, weight: .semibold, design: .default))
+                                    Image(systemName: "key.fill").foregroundColor(.black).font(.system(size: 18, weight: .semibold, design: .default))
                                     SecureField("Password", text: $password).font(.system(size: 20, weight: .semibold, design: .default))
 
                                 }
