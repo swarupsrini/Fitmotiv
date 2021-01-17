@@ -30,7 +30,7 @@ struct ContentView: View {
             }
             Settings()
                 .tabItem {
-                    Image(systemName: "gear.fill")
+                    Image(systemName: "gearshape.fill")
                     Text("Settings")
             }
         }   // End of TabView

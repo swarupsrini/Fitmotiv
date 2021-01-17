@@ -18,6 +18,7 @@
 		3185DD7425B389F700F929A3 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3185DD7325B389F700F929A3 /* Login.swift */; };
 		3185DD7825B3B89700F929A3 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3185DD7725B3B89700F929A3 /* Workout.swift */; };
 		3185DD8025B3FC6200F929A3 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3185DD7F25B3FC6200F929A3 /* WebView.swift */; };
+		318DCBE225B48EED00E76D98 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318DCBE125B48EED00E76D98 /* Backend.swift */; };
 		31C15C3925B42CAB005ABAA7 /* Break.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C15C3825B42CAB005ABAA7 /* Break.swift */; };
 		31C15C3C25B42FB9005ABAA7 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C15C3B25B42FB9005ABAA7 /* Firebase.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		3185DD7325B389F700F929A3 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		3185DD7725B3B89700F929A3 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		3185DD7F25B3FC6200F929A3 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		318DCBE125B48EED00E76D98 /* Backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
 		31C15C3825B42CAB005ABAA7 /* Break.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Break.swift; sourceTree = "<group>"; };
 		31C15C3B25B42FB9005ABAA7 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,11 +74,11 @@
 			children = (
 				3185DD6525B3886500F929A3 /* Views */,
 				3185DD5525B37F7700F929A3 /* FitSyncApp.swift */,
+				31C15C3B25B42FB9005ABAA7 /* Firebase.swift */,
 				3185DD5725B37F7700F929A3 /* ContentView.swift */,
 				3185DD5925B37F7A00F929A3 /* Assets.xcassets */,
 				3185DD5E25B37F7A00F929A3 /* Info.plist */,
 				3185DD5B25B37F7A00F929A3 /* Preview Content */,
-				31C15C3B25B42FB9005ABAA7 /* Firebase.swift */,
 			);
 			path = FitSync;
 			sourceTree = "<group>";
@@ -100,6 +102,7 @@
 				3185DD7325B389F700F929A3 /* Login.swift */,
 				3185DD7725B3B89700F929A3 /* Workout.swift */,
 				3185DD7F25B3FC6200F929A3 /* WebView.swift */,
+				318DCBE125B48EED00E76D98 /* Backend.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				3185DD7125B388C600F929A3 /* Social.swift in Sources */,
 				3185DD6B25B388A200F929A3 /* Settings.swift in Sources */,
 				31C15C3C25B42FB9005ABAA7 /* Firebase.swift in Sources */,
+				318DCBE225B48EED00E76D98 /* Backend.swift in Sources */,
 				3185DD8025B3FC6200F929A3 /* WebView.swift in Sources */,
 				3185DD6E25B388B500F929A3 /* Analytics.swift in Sources */,
 				3185DD5625B37F7700F929A3 /* FitSyncApp.swift in Sources */,
