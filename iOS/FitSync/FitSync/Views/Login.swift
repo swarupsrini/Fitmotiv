@@ -16,9 +16,9 @@ struct Login: View {
             ZStack{
                 VStack{
                     VStack{
-                        Image("yoga").resizable().aspectRatio(contentMode: .fit).padding(.top, -230).overlay(
-                            Text("Logo").foregroundColor(Color.white).bold().font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).padding(.top, -150)
-                        )
+                        Image("logo").resizable().aspectRatio(contentMode: .fit)
+                            .frame(width: 425,height:400)
+
 
                     }
                     VStack{
@@ -55,7 +55,7 @@ struct Login: View {
                                         .frame(height: 2)
                                         .foregroundColor(Color.black),
                                     alignment: .bottom
-                                ).padding(.bottom, 50)
+                                ).padding(.bottom, 40)
 
 
                                 //Button
@@ -103,7 +103,7 @@ struct Login: View {
 
                         VStack(alignment: .center){
                             Text("Forgot Password?").bold()
-                                .padding(.bottom, 20)
+//                                .padding(.bottom, 10)
                             Text("Create a New Account").bold()
                         }
                     }//End of VStack

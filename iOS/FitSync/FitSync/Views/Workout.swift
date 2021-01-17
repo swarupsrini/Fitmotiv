@@ -19,10 +19,8 @@ struct Workout: View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
 
             //Add View
-            WebView(showURL: "https://fierce-stream-07253.herokuapp.com/")
-                .frame(width: UIScreen.main.bounds.width)
 
-//            SafariView(url:URL(string: self.urlString)!)
+            SafariView(url:URL(string: self.urlString)!)
 
 
 
