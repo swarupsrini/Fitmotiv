@@ -9,7 +9,11 @@ import SwiftUI
 
 struct Settings: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            VStack{
+                Image("Settings").resizable().aspectRatio(contentMode: .fit).frame(width: 415,height:900)
+            }
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 

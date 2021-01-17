@@ -11,7 +11,7 @@ struct Home: View {
     var body: some View {
         ZStack{
             VStack{
-                Image("home").resizable().aspectRatio(contentMode: .fit).frame(width: 415,height:900)
+                Image("Home").resizable().aspectRatio(contentMode: .fit).frame(width: 415,height:900)
             }
         }.edgesIgnoringSafeArea(.all)
     }

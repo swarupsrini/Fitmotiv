@@ -9,7 +9,11 @@ import SwiftUI
 
 struct Analytics: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            VStack{
+                Image("Analytics").resizable().aspectRatio(contentMode: .fit).frame(width: 415,height:900)
+            }
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 
