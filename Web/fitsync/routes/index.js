@@ -2,10 +2,13 @@ var express = require("express");
 var router = express.Router();
 const OpenTok = require("opentok");
 
-const secrets = require("../keys/passwords.json");
+let secrets;
+if (!process.env.DB_PASS) {
+  secrets = require("../keys/passwords.json");
+}
 
-const API_KEY = secrets["API_KEY"];
-const API_SECRET = secrets["SECRET"];
+const API_KEY = process.env.API_KEY || secrets["API_KEY"];
+const API_SECRET = process.env.SECRET || secrets["SECRET"];
 
 router.get("/", function (req, res, next) {
   create_session(({ sessionId, token }) => {
