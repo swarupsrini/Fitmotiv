@@ -71,10 +71,10 @@ func workoutDetails() -> some View {
 
 
             }) {
-                NavigationLink(destination: ContentView()) {
+                NavigationLink(destination: InviteFriends()) {
                     HStack(alignment: .center) {
                         Spacer()
-                        Text("").foregroundColor(Color.white).bold()
+                        Text("").foregroundColor(Color.black).bold()
                         Spacer()
                     }
                 }
@@ -85,6 +85,83 @@ func workoutDetails() -> some View {
     .edgesIgnoringSafeArea(.all).navigationBarTitle("")
     .navigationBarHidden(true)
 }
+
+func InviteFriends() -> some View {
+    ZStack{
+        VStack{
+            Image("InviteFriends").resizable().aspectRatio(contentMode: .fit).frame(width: 415,height:900)
+
+            Button(action: {
+
+
+            }) {
+                NavigationLink(destination: InviteSent()) {
+                    HStack(alignment: .center) {
+                        Spacer()
+                        Text("").foregroundColor(Color.black).bold()
+                        Spacer()
+                    }
+                }
+
+            }.padding().cornerRadius(20.0).padding(.top, -210).buttonStyle(PlainButtonStyle())
+        }
+    }//ZStack
+    .edgesIgnoringSafeArea(.all).navigationBarTitle("")
+    .navigationBarHidden(true)
+}
+
+func InviteSent() -> some View {
+    ZStack{
+        VStack{
+            Image("InviteSent").resizable().aspectRatio(contentMode: .fit).frame(width: 415,height:900)
+
+            Button(action: {
+
+
+            }) {
+                NavigationLink(destination: FriendAccepted()) {
+                    HStack(alignment: .center) {
+                        Spacer()
+                        Text("").foregroundColor(Color.black).bold()
+                        Spacer()
+                    }
+                }
+
+            }.padding().cornerRadius(20.0).padding(.top, -210).buttonStyle(PlainButtonStyle())
+        }
+    }//ZStack
+    .edgesIgnoringSafeArea(.all).navigationBarTitle("")
+    .navigationBarHidden(true)
+}
+
+func FriendAccepted() -> some View {
+    ZStack{
+        VStack{
+            Image("FriendAccepted").resizable().aspectRatio(contentMode: .fit).frame(width: 415,height:900)
+
+            Button(action: {
+
+
+            }) {
+                NavigationLink(destination: Workout()) {
+                    HStack(alignment: .center) {
+                        Spacer()
+                        Text("").foregroundColor(Color.black).bold()
+                        Spacer()
+                    }
+                }
+
+            }.padding().cornerRadius(20.0).padding(.top, -210).buttonStyle(PlainButtonStyle())
+        }
+    }//ZStack
+    .edgesIgnoringSafeArea(.all).navigationBarTitle("")
+    .navigationBarHidden(true)
+}
+
+
+
+
+
 
 
 

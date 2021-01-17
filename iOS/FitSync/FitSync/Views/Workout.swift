@@ -20,7 +20,8 @@ struct Workout: View {
 
             //Add View
 
-            SafariView(url:URL(string: self.urlString)!)
+//            SafariView(url:URL(string: self.urlString)!)
+            Image("WorkoutScreen").resizable().aspectRatio(contentMode: .fit).frame(width: 420,height:890)
 
 
 
@@ -97,7 +98,8 @@ struct Workout: View {
                 }
             }
 //            .ignoresSafeArea(.all, edges: .bottom)
-            .edgesIgnoringSafeArea(.top)
+            .edgesIgnoringSafeArea(.top).navigationBarTitle("")
+            .navigationBarHidden(true)
         })
     }
 }
@@ -138,10 +140,13 @@ struct BottomSheet : View {
 
                 Spacer()
                 
-
+                NavigationLink(destination: Break()) {
                 Image(systemName: "pause.circle")
                     .font(.system(size: 49))
                     .foregroundColor(.orange)
+                }
+
+
                 Spacer()
 
                 HStack{
