@@ -87,6 +87,7 @@
 		3185DD6525B3886500F929A3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				31C15C3525B421BD005ABAA7 /* Workouts */,
 				3185DD6725B3889800F929A3 /* Home.swift */,
 				3185DD6A25B388A200F929A3 /* Settings.swift */,
 				3185DD6D25B388B500F929A3 /* Analytics.swift */,
@@ -96,6 +97,13 @@
 				3185DD7F25B3FC6200F929A3 /* WebView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		31C15C3525B421BD005ABAA7 /* Workouts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Workouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
