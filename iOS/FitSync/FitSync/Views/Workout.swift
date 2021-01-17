@@ -113,9 +113,10 @@ struct BottomSheet : View {
 
             HStack(alignment: .center){
 
-                Text("15 Sit Ups").font(.system(size: 20)).bold()
+                Text("Plank").font(.system(size: 20)).bold().padding(.trailing,45)
 
                 Spacer()
+                
 
                 Image(systemName: "pause.circle")
                     .font(.system(size: 49))
