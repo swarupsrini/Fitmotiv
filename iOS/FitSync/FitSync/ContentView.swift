@@ -33,7 +33,7 @@ struct ContentView: View {
                     Image(systemName: "gear")
                     Text("Settings")
             }
-            Workout()
+            Workout(screenType: "Workout")
                 .tabItem {
                     Image(systemName: "gear")
                     Text("Settings")

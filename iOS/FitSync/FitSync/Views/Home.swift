@@ -143,7 +143,7 @@ func FriendAccepted() -> some View {
 
 
             }) {
-                NavigationLink(destination: Workout()) {
+                NavigationLink(destination: Workout(screenType: "Workout")) {
                     HStack(alignment: .center) {
                         Spacer()
                         Text("").foregroundColor(Color.black).bold()
