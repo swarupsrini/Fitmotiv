@@ -13,7 +13,7 @@ const pool = new Pool({
   database: "defaultdb",
   port: 26257,
   ssl: {
-    ca: fs.readFileSync(__dirname + "/../keys/cc-ca.crt").toString(),
+    ca: passwords["DB_CERT"],
   },
 });
 
