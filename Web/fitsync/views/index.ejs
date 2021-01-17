@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Von boi</title>
+    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>Von boi</h1>
+    <p>Welcome to Von boi</p>
+    <div id="videos">
+      <div id="subscriber"></div>
+      <div id="publisher"></div>
+    </div>
+    <script>
+      const data = <%- data %>;
+    </script>
+    <script type="text/javascript" src="/js/vonage.js"></script>
   </body>
 </html>
