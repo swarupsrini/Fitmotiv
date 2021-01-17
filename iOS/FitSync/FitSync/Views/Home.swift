@@ -29,16 +29,43 @@ struct Home: View {
                     }.padding().cornerRadius(20.0).padding(.top, -210).buttonStyle(PlainButtonStyle())
                 }
             }//ZStack
-            .edgesIgnoringSafeArea(.all) .navigationBarBackButtonHidden(true)
+            .edgesIgnoringSafeArea(.all).navigationBarTitle("")
+            .navigationBarHidden(true)
         }//Nav. View
     }
 }
 
 func chooseWorkout() -> some View {
     ScrollView {
+        ZStack{
+            VStack{
+                Image("Workouts").resizable().aspectRatio(contentMode: .fit).frame(width: 415,height:1400).padding(.top,-70)
+
+                Button(action: {
+
+
+                }) {
+                    NavigationLink(destination: workoutDetails()) {
+                        HStack(alignment: .center) {
+                            Spacer()
+                            Text("").foregroundColor(Color.black).bold()
+                            Spacer()
+                        }
+                        
+                    }
+
+                }.padding().cornerRadius(20.0).padding(.top, -870).buttonStyle(PlainButtonStyle())
+            }
+        }//ZStack
+        .edgesIgnoringSafeArea(.all).navigationBarTitle("")
+        .navigationBarHidden(true)
+    }
+}
+
+func workoutDetails() -> some View {
     ZStack{
         VStack{
-            Image("Workouts").resizable().aspectRatio(contentMode: .fit).frame(width: 415,height:1400).padding(.top,-70)
+            Image("Core").resizable().aspectRatio(contentMode: .fit).frame(width: 415,height:900)
 
             Button(action: {
 
@@ -57,7 +84,6 @@ func chooseWorkout() -> some View {
     }//ZStack
     .edgesIgnoringSafeArea(.all).navigationBarTitle("")
     .navigationBarHidden(true)
-    }
 }
 
 
