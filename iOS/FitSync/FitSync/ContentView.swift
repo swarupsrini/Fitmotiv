@@ -33,6 +33,11 @@ struct ContentView: View {
                     Image(systemName: "gear")
                     Text("Settings")
             }
+            Workout()
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Settings")
+            }
         }   // End of TabView
             .font(.headline)
             .imageScale(.medium)

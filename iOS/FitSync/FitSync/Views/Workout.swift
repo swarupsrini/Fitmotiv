@@ -6,18 +6,26 @@
 //
 
 import SwiftUI
-import MapKit
+//import MapKit
+import SafariServices
 
 struct Workout: View {
-    @State var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 13.086, longitude: 80.2789), latitudinalMeters: 10000, longitudinalMeters: 10000)
+//    @State var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 13.086, longitude: 80.2789), latitudinalMeters: 10000, longitudinalMeters: 10000)
     @State var offset : CGFloat = 0
+    @State var urlString = "https://fierce-stream-07253.herokuapp.com/"
 
     var body: some View{
 
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
 
             //Add View
-            Login()
+            WebView(showURL: "https://fierce-stream-07253.herokuapp.com/")
+                .frame(width: UIScreen.main.bounds.width)
+
+//            SafariView(url:URL(string: self.urlString)!)
+
+
+
             //                Map(coordinateRegion: $region)
             //                    .ignoresSafeArea(.all, edges: .all)
 
@@ -90,9 +98,24 @@ struct Workout: View {
                         }))
                 }
             }
-            .ignoresSafeArea(.all, edges: .bottom)
+//            .ignoresSafeArea(.all, edges: .bottom)
+            .edgesIgnoringSafeArea(.top)
         })
     }
+}
+
+struct SafariView: UIViewControllerRepresentable {
+
+    let url: URL
+
+    func makeUIViewController(context: UIViewControllerRepresentableContext<SafariView>) -> SFSafariViewController {
+        return SFSafariViewController(url: url)
+    }
+
+    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<SafariView>) {
+
+    }
+
 }
 
 struct BottomSheet : View {

@@ -37,7 +37,7 @@ struct Login: View {
                                 .padding(.bottom, 20)
                                 .overlay(
                                     Rectangle()
-                                        .frame(height: 4)
+                                        .frame(height: 2)
                                         .foregroundColor(Color.black),
                                     alignment: .bottom
                                 )
@@ -52,7 +52,7 @@ struct Login: View {
                                 .padding(.bottom, 20)
                                 .overlay(
                                     Rectangle()
-                                        .frame(height: 4)
+                                        .frame(height: 2)
                                         .foregroundColor(Color.black),
                                     alignment: .bottom
                                 ).padding(.bottom, 50)
