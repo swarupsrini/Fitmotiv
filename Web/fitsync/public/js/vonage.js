@@ -1,9 +1,18 @@
 let publisher;
-let vidOn = true;
-let micOn = true;
-
+let vidOn = false;
+let micOn = false;
+let sdk;
+let recognizer;
+let speechConfig;
 initializeSession();
+init_sdk();
 
+function init_sdk() {
+  if (!!window.SpeechSDK) {
+    sdk = window.SpeechSDK;
+  }
+  // azure_speech();
+}
 // Handling all of our errors here by alerting them
 function handleError(error) {
   if (error) {
@@ -36,8 +45,8 @@ function initializeSession() {
       width: "100%",
       height: "100%",
       style: { buttonDisplayMode: "off" },
-      publishAudio: true,
-      publishVideo: true,
+      publishAudio: micOn,
+      publishVideo: vidOn,
     },
     handleError
   );
@@ -49,8 +58,24 @@ function initializeSession() {
       handleError(error);
     } else {
       session.publish(publisher, handleError);
+      // azure_speech();
     }
   });
+}
+
+function azure_speech() {
+  speechConfig = sdk.SpeechConfig.fromSubscription(data.azure, "eastus");
+  let audioConfig = sdk.AudioConfig.fromDefaultMicrophoneInput();
+  recognizer = new sdk.SpeechRecognizer(speechConfig, audioConfig);
+
+  console.log("Speak into your microphone.");
+  recognizer.recognized = (s, e) => {
+    console.log(`RECOGNIZED: Text=${e.result.text}`);
+  };
+  recognizer.recognizing = (s, e) => {
+    console.log(`RECOGNIZING: Text=${e.result.text}`);
+  };
+  recognizer.startContinuousRecognitionAsync();
 }
 
 function videobtnclick(event) {
@@ -67,6 +92,7 @@ function videobtnclick(event) {
 }
 
 function audiobtnclick(event) {
+  azure_speech();
   micOn = !micOn;
   console.log(micOn);
   publisher.publishAudio(micOn);
