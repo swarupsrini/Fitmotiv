@@ -16,6 +16,7 @@
 		3185DD6E25B388B500F929A3 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3185DD6D25B388B500F929A3 /* Analytics.swift */; };
 		3185DD7125B388C600F929A3 /* Social.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3185DD7025B388C600F929A3 /* Social.swift */; };
 		3185DD7425B389F700F929A3 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3185DD7325B389F700F929A3 /* Login.swift */; };
+		3185DD7825B3B89700F929A3 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3185DD7725B3B89700F929A3 /* Workout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3185DD6D25B388B500F929A3 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		3185DD7025B388C600F929A3 /* Social.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social.swift; sourceTree = "<group>"; };
 		3185DD7325B389F700F929A3 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		3185DD7725B3B89700F929A3 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				3185DD6D25B388B500F929A3 /* Analytics.swift */,
 				3185DD7025B388C600F929A3 /* Social.swift */,
 				3185DD7325B389F700F929A3 /* Login.swift */,
+				3185DD7725B3B89700F929A3 /* Workout.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				3185DD7425B389F700F929A3 /* Login.swift in Sources */,
 				3185DD5825B37F7700F929A3 /* ContentView.swift in Sources */,
 				3185DD6825B3889800F929A3 /* Home.swift in Sources */,
+				3185DD7825B3B89700F929A3 /* Workout.swift in Sources */,
 				3185DD7125B388C600F929A3 /* Social.swift in Sources */,
 				3185DD6B25B388A200F929A3 /* Settings.swift in Sources */,
 				3185DD6E25B388B500F929A3 /* Analytics.swift in Sources */,
