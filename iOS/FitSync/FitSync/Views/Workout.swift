@@ -26,7 +26,8 @@ struct Workout: View {
 
             //            SafariView(url:URL(string: self.urlString)!)
             if(screenType == "Workout"){
-                Image("WorkoutScreen").resizable().aspectRatio(contentMode: .fit).frame(width: 420,height:890)
+//                Image("WorkoutScreen").resizable().aspectRatio(contentMode: .fit).frame(width: 420,height:890)
+                SafariView(url:URL(string: self.urlString)!)
             }
             else{
                 Image("RestScreen").resizable().aspectRatio(contentMode: .fit).frame(width: 420,height:890)

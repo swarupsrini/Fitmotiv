@@ -12,32 +12,33 @@ struct ContentView: View {
 
 
     var body: some View {
-        TabView {
-            Home()
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Home")
-            }
-            Analytics()
-                .tabItem {
-                    Image(systemName: "chart.bar.fill")
-                    Text("Analytics")
-            }
-            Social()
-                .tabItem {
-                    Image(systemName: "person.3.fill")
-                    Text("Social")
-            }
-            Settings()
-                .tabItem {
-                    Image(systemName: "gearshape.fill")
-                    Text("Settings")
-            }
-        }   // End of TabView
-            .font(.headline)
-            .imageScale(.medium)
-            .font(Font.title.weight(.regular))
-        .navigationBarBackButtonHidden(true)
+        Workout(screenType: "Workout")
+//        TabView {
+//            Home()
+//                .tabItem {
+//                    Image(systemName: "house.fill")
+//                    Text("Home")
+//            }
+//            Analytics()
+//                .tabItem {
+//                    Image(systemName: "chart.bar.fill")
+//                    Text("Analytics")
+//            }
+//            Social()
+//                .tabItem {
+//                    Image(systemName: "person.3.fill")
+//                    Text("Social")
+//            }
+//            Settings()
+//                .tabItem {
+//                    Image(systemName: "gearshape.fill")
+//                    Text("Settings")
+//            }
+//        }   // End of TabView
+//            .font(.headline)
+//            .imageScale(.medium)
+//            .font(Font.title.weight(.regular))
+//        .navigationBarBackButtonHidden(true)
 
     }
 }
